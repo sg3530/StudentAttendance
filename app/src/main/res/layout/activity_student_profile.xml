@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FBFDFD"
+        >
+        <TextView
+            android:id="@+id/text_profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Profile"
+            android:textColor="#000000"
+            android:layout_marginTop="20dp"
+            android:textSize="25sp" />
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:id="@+id/image_studentProfile"
+            android:src="@drawable/user"
+            android:layout_below="@id/text_profile"
+            app:civ_border_width="2dp"
+            app:civ_border_color="#11062C"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/button_saveImage"
+            android:text="Upload Photo"
+            android:layout_below="@+id/image_studentProfile"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:textAllCaps="false"
+            android:background="#FBFDFD"
+            />
+
+        <TextView
+            android:id="@+id/text_profileName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/image_studentProfile"
+            android:layout_alignBottom="@+id/image_studentProfile"
+            android:layout_toRightOf="@+id/image_studentProfile"
+            android:gravity="center"
+            android:text="Patrizia Devan"
+            android:layout_marginLeft="10dp"
+            android:textColor="#000000"
+            android:textSize="27sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView_profileImageError"
+            android:textColor="#B1121F"
+            android:layout_toRightOf="@id/image_studentProfile"
+            android:layout_below="@id/text_profileName"
+            android:layout_alignLeft="@id/image_studentProfile"
+            android:textSize="10sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView_emailText"
+            android:text="Email"
+            android:textSize="20sp"
+            android:layout_below="@+id/text_profileName"
+            android:layout_marginLeft="20dp"
+            android:textStyle="bold"
+            android:layout_marginTop="50dp"/>
+
+        <EditText
+            android:id="@+id/editText_fullName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView_emailText"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/drawable_edittext"
+            android:hint="Full Name"
+            android:inputType="textEmailAddress"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:padding="5dp" />
+
+        <EditText
+            android:id="@+id/editText_mobileNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/editText_fullName"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/drawable_edittext"
+            android:inputType="number"
+            android:hint="Mobile Number"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:padding="5dp" />
+
+        <TextView
+            android:id="@+id/textView_RollnoText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editText_mobileNumber"
+            android:layout_marginTop="15dp"
+            android:text="Roll Number : "
+            android:textSize="20sp"
+            android:layout_marginLeft="20dp"
+            android:textColor="#090909"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView_RollNo"
+            android:layout_below="@id/editText_mobileNumber"
+            android:layout_marginTop="15dp"
+            android:textSize="20sp"
+            android:text="123456"
+            android:layout_marginRight="20dp"
+            android:layout_toRightOf="@id/textView_RollnoText"
+          />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/text_studentGender"
+            android:layout_below="@id/textView_RollnoText"
+            android:layout_marginTop="10dp"
+            android:text="Gender: "
+            android:textSize="20sp"
+            android:textColor="#090909"
+            android:layout_marginLeft="20dp"
+            />
+
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/radioGroup_studentGender"
+            android:layout_below="@+id/textView_RollnoText"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/text_studentGender"
+            android:orientation="horizontal"
+            >
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/radioButton_male"
+                android:text="Male"
+                android:checked="true"
+                />
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/radioButton_female"
+                android:text="Female"/>
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/radioButton_other"
+                android:layout_marginRight="20dp"
+                android:text="Other"/>
+        </RadioGroup>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView_branchText"
+            android:layout_below="@+id/radioGroup_studentGender"
+            android:text="Branch : "
+            android:textSize="20sp"
+            android:layout_marginTop="10dp"
+            android:textColor="#090909"
+            android:layout_marginLeft="20dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView_branchName"
+            android:text="xyz"
+            android:layout_below="@+id/radioGroup_studentGender"
+            android:layout_toRightOf="@id/textView_branchText"
+            android:textSize="20sp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView_yearText"
+            android:layout_below="@+id/textView_branchText"
+            android:text="Year : "
+            android:textSize="20sp"
+            android:layout_marginTop="10dp"
+            android:textColor="#090909"
+            android:layout_marginLeft="20dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView_year"
+            android:layout_below="@+id/textView_branchText"
+            android:layout_toRightOf="@+id/textView_yearText"
+            android:text="0"
+            android:textSize="20sp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            />
+
+        <TextView
+            android:id="@+id/textView_sectionText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView_yearText"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:text="Section : "
+            android:textColor="#090909"
+            android:textSize="20sp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView_section"
+            android:layout_below="@+id/textView_yearText"
+            android:layout_toRightOf="@+id/textView_sectionText"
+            android:text="Z"
+            android:textSize="20sp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            />
+
+        <TextView
+            android:id="@+id/text_changePassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView_section"
+            android:layout_marginTop="20dp"
+            android:text="Change Password"
+            android:textColor="#000000"
+            android:textSize="17sp"
+            android:layout_marginLeft="20dp"
+            />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/button_update"
+            android:text="Update"
+            android:layout_below="@id/text_changePassword"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+
+            android:textAllCaps="false"
+            android:textSize="20sp"
+           />
+        <ProgressBar
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:id="@+id/progressBar_profile"
+            android:layout_centerInParent="true"/>
+    </RelativeLayout>
+
+</ScrollView>

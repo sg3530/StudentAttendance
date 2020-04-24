@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".AdminDashboard">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/relativeLayout_adminDashboard"
+        android:padding="20dp"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/linearLayout_adminDashboard"
+            android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/text_studentBranch"
+            android:layout_below="@+id/radioGroup_studentGender"
+            android:text="Branch: "
+            android:textSize="20sp"/>
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinner_studentBranch"
+
+            android:layout_below="@id/text_studentBranch"
+
+            android:layout_marginTop="10dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/text_studentYear"
+            android:layout_below="@id/spinner_studentBranch"
+            android:layout_marginTop="10dp"
+            android:text="Year: "
+            android:textSize="20sp"/>
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinner_studentYear"
+
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/text_studentYear" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:orientation="vertical"
+            >
+            <Button
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:id="@+id/button_submitSubjects"
+                android:background="@drawable/ic_check_circle_black_24dp"
+                />
+            <Button
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:id="@+id/button_removeEditText"
+            android:background="@drawable/ic_remove_circle_black_24dp"
+            />
+        <Button
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:id="@+id/button_addEditText"
+            android:background="@drawable/ic_add_circle_black_24dp"
+            />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</ScrollView>

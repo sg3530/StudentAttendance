@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:scrollbars="none">
+
+
+  <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:padding="30dp">
+      <ImageView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:id="@+id/image_studentLogin"
+          android:layout_centerHorizontal="true"
+          android:src="@drawable/student2"/>
+      <EditText
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:id="@+id/ediText_studentLoginEmail"
+          android:layout_marginTop="10dp"
+          android:layout_below="@id/image_studentLogin"
+          android:hint="Email"
+          android:inputType="textEmailAddress"
+          />
+
+
+      <ImageView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:id="@+id/toggle_visiblePassword"
+          android:layout_alignParentRight="true"
+          android:src="@drawable/ic_visibility_black_24dp"
+          android:layout_below="@id/ediText_studentLoginEmail"
+          android:layout_marginTop="20dp"
+          />
+      <ImageView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:id="@+id/toggle_visibleOffPassword"
+          android:layout_alignParentRight="true"
+          android:src="@drawable/ic_visibility_off_black_24dp"
+          android:layout_below="@id/ediText_studentLoginEmail"
+          android:layout_marginTop="20dp"
+          />
+      <EditText
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:id="@+id/editText_studentLoginPassword"
+          android:layout_below="@+id/ediText_studentLoginEmail"
+          android:hint="Password"
+          android:layout_marginTop="10dp"
+          android:inputType="textPassword"
+          android:layout_toLeftOf="@id/toggle_visiblePassword"
+          />
+
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:id="@+id/text_studentLoginForgotPassword"
+          android:layout_below="@id/editText_studentLoginPassword"
+          android:text="Forgot Your Password?"
+          android:layout_marginTop="10dp"
+          android:layout_alignRight="@id/editText_studentLoginPassword"/>
+      <Button
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:id="@+id/button_studentLogin"
+          android:layout_below="@id/text_studentLoginForgotPassword"
+          android:layout_marginTop="20dp"
+          android:text="Login"
+          android:textAllCaps="false"
+          android:textSize="20sp"
+          android:layout_centerHorizontal="true"
+          android:textColor="#FCFCFC"
+          android:background="#2A0E5E"
+          />
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:id="@+id/text_studenthaveAccunt"
+          android:layout_below="@id/button_studentLogin"
+          android:text="Do'nt have an account? "
+          android:layout_marginTop="10dp"
+          android:layout_centerHorizontal="true"/>
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:id="@+id/text_studentcreate"
+          android:layout_below="@id/button_studentLogin"
+          android:layout_toRightOf="@id/text_studenthaveAccunt"
+          android:layout_marginTop="10dp"
+          android:text="Create"
+          android:textColor="#CF0A22"/>
+      <ProgressBar
+          android:layout_width="70dp"
+          android:layout_height="70dp"
+          android:id="@+id/progressBar"
+          android:layout_below="@id/text_studenthaveAccunt"
+          android:layout_centerInParent="true"/>
+
+  </RelativeLayout>
+</ScrollView>

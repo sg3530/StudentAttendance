@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".StudentDashboard">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout_topDashboard"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="#008577">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/image_studentProfile"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:src="@drawable/ic_person_black_24dp"
+            app:civ_border_color="#11062C"
+            app:civ_border_width="2dp" />
+
+        <TextView
+            android:id="@+id/textView_studentProfileName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/image_studentProfile"
+            android:text="Student Name"
+            android:textColor="#000000"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView_studentProfileEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/image_studentProfile"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginBottom="10dp"
+            android:text="Student@gmail.com"
+            android:textColor="#000000"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#E7EFEE"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView_scannerResult"
+                android:text="ScannerResult"
+                android:layout_centerInParent="true"
+                android:textSize="25sp"/>
+        </RelativeLayout>
+
+
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/item_mainMenu"
+        android:icon="@drawable/ic_more_vert_black_24dp"
+        android:title="Main_Menu"
+        app:showAsAction="always">
+
+        <menu>
+            <item
+                android:id="@+id/item_addSubjects"
+                android:icon="@drawable/ic_subjectview"
+                android:title="View Subjects"
+                app:showAsAction="never">
+                <menu>
+                    <item
+                        android:id="@+id/item_year"
+                        android:title="Year"
+                        app:showAsAction="never">
+                        <menu>
+                            <item
+                                android:id="@+id/item_1styear"
+                                android:title="1st year"
+                                app:showAsAction="never"/>
+                            <item
+                                android:id="@+id/item_2ndyear"
+                                android:title="2nd year"
+                                app:showAsAction="never"/>
+                            <item
+                                android:id="@+id/item_3rdyear"
+                                android:title="3rd year"
+                                app:showAsAction="never"/>
+                            <item
+                                android:id="@+id/item_4thyear"
+                                android:title="4th year"
+                                app:showAsAction="never"/>
+                        </menu>
+                    </item>
+                </menu>
+            </item>
+        </menu>
+    </item>
+
+</menu>
